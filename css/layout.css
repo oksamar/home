@@ -35,7 +35,7 @@ header {
    /* height: 800px;
    min-height: 100px;
    width: 100%; */
-   background: #161415 url(../images/Cover_Image_Trail_2.png) no-repeat top center;  
+   background: #161415 url(../images/Cover_Image_Trail_5.png) no-repeat top center;  
    background-size: 100%;
 
    background-position: bottom;
@@ -48,7 +48,7 @@ header:before {
    content: '';
    display: inline-block;
    vertical-align: middle;
-   height: 35%;
+   height: 50%;
 }
 header .banner {
    display: inline-block;
