@@ -21,12 +21,7 @@
 	<link rel="stylesheet" href="css/layout.css">
    <link rel="stylesheet" href="css/media-queries.css">
    <link rel="stylesheet" href="css/magnific-popup.css">
-
-   <!-- Script
-   ================================================== -->
-	<script src="js/modernizr.js"></script>
-
-   <!-- Favicons
+   <link rel="stylesheet" href="css/custom.css">
 	================================================== -->
 <!--	<link rel="shortcut icon" href="favicon.ico" >-->
 
@@ -207,8 +202,27 @@ function showHide(shID) {
       <div class="row add-bottom">
 
          <div class="twelve columns">
-            <h2>About Me</h1>
-            <p align ="left" class="twelve columns"><a href="#"><img style="max-width: 220px; width: 100%; height: auto;" class="pull-left" alt="sample-image" src="./images/samar.png"></a>            
+            
+            <!-- New: compact intro that uses the "banner space" but starts at About Me -->
+            <div class="about-hero">
+               <a href="#"><img alt="Samarjeet Das" src="./images/samar.png"></a>
+               <div>
+                  <p class="kicker">AI/ML Research Scientist • Signal Processing • Machine Learning</p>
+                  <h2 class="name">Samarjeet Das</h2>
+                  <p>
+                     Researcher with a PhD in Signal Processing and Machine Learning from IIT Guwahati. 
+                     Interested in time-frequency analysis, deep learning for non-stationary signals, and agentic AI for autonomous systems.
+                  </p>
+                  <div class="cta-row">
+                     <a class="btn" href="https://scholar.google.com/citations?user=FjUfmoMAAAAJ&hl=en&oi=ao" target="_blank" rel="noopener">Google Scholar</a>
+                     <a class="btn" href="https://github.com/oksamar" target="_blank" rel="noopener">GitHub</a>
+                     <a class="btn" href="mailto:samarjeet025@gmail.com">Email</a>
+                  </div>
+               </div>
+            </div>
+
+            <h2>About Me</h2>
+            <p align ="left" class="twelve columns">
             Hello! 👋 I am <b>Samarjeet Das</b>: a researcher with a PhD in Signal Processing and Machine Learning from IIT Guwahati. I am deeply intrigued by signals and passionate about leveraging machine learning and deep learning models to predict and classify future trends and patterns.
             I am also interested in emerging paradigms like Agentic AI to build autonomous systems that can reason, adapt, and optimize complex processes. 
             <br> <br><br>
@@ -220,21 +234,23 @@ function showHide(shID) {
             <hr>
             <h3>Previous Affiliations</h3>
             <br>
-            <p style="margin-bottom: 15px;"><i>+ From March 2024 - August 2025</i>: I was an AI/ML Research Engineer (GM R&D) at the <a href="https://www.tcs.com/">Tata Consultancy Services (TCS)</a>, Bengaluru (India)</a>.</p>
+            <div class="affiliations">
+               <p><i>+ From March 2024 - August 2025</i>: I was an AI/ML Research Engineer (GM R&D) at the <a href="https://www.tcs.com/">Tata Consultancy Services (TCS)</a>, Bengaluru (India).</p>
 			   
-            <p style="margin-bottom: 15px;"><i>+ From June 2023 - March 2024</i>: I was a Research Assistant at the <a href="https://iitg.ac.in/tihue/">Technology Innovation Hub</a>, in the <a href="https://www.iitg.ac.in">Indian Institute of Technology, Guwahati (India)</a>.</p>
+               <p><i>+ From June 2023 - March 2024</i>: I was a Research Assistant at the <a href="https://iitg.ac.in/tihue/">Technology Innovation Hub</a>, in the <a href="https://www.iitg.ac.in">Indian Institute of Technology, Guwahati (India)</a>.</p>
 			   
-            <p style="margin-bottom: 15px;"><i>+ From July 2017 - October 2023</i>: I pursued a Ph.D. degree (Signal Processing and Machine Learning), from the <a href="https://www.iitg.ac.in">Indian Institute of Technology, Guwahati (India)</a>.
-         My Ph.D. thesis was titled <b>"Automated Diagnosis of Heart Valve Diseases From Phonocardiogram Signals Using Deep Learning"</b>. 
-			I had my research denizen at the wonderful <a href="https://www.iitg.ac.in/eee/emstlab/index.php"> Electro Medical Speech Technology (EMST) Lab</a>, with the guidance of <a href="https://www.iitg.ac.in/samaren/">Prof. Samarendra Dandapat</a>.</p>
+               <p><i>+ From July 2017 - October 2023</i>: I pursued a Ph.D. degree (Signal Processing and Machine Learning), from the <a href="https://www.iitg.ac.in">Indian Institute of Technology, Guwahati (India)</a>.
+               My Ph.D. thesis was titled <b>"Automated Diagnosis of Heart Valve Diseases From Phonocardiogram Signals Using Deep Learning"</b>. 
+			   I had my research denizen at the wonderful <a href="https://www.iitg.ac.in/eee/emstlab/index.php"> Electro Medical Speech Technology (EMST) Lab</a>, with the guidance of <a href="https://www.iitg.ac.in/samaren/">Prof. Samarendra Dandapat</a>.</p>
             
-            <p style="margin-bottom: 15px;"><i>+ From July 2015 - May 2017</i>: I received a M.Tech degree (Mechatronics), from the <a href="https://www.iiests.ac.in/">Indian Institute of Engineering Science and Technology, Shibpur (India)</a>. 
-			My M.Tech thesis was titled <b>"Studies on Development of an Underwater Acoustic Pinger System for Source Localization"</b>. 
-			I had my research habitat at the robotics and automation group, <a href="https://www.cmeri.res.in/">CSIR-CMERI</a>, Durgapur, with the guidance of Dr. Siva Ram Krishina Vadali, Principal Scientist.</p>
+               <p><i>+ From July 2015 - May 2017</i>: I received a M.Tech degree (Mechatronics), from the <a href="https://www.iiests.ac.in/">Indian Institute of Engineering Science and Technology, Shibpur (India)</a>. 
+			   My M.Tech thesis was titled <b>"Studies on Development of an Underwater Acoustic Pinger System for Source Localization"</b>. 
+			   I had my research habitat at the robotics and automation group, <a href="https://www.cmeri.res.in/">CSIR-CMERI</a>, Durgapur, with the guidance of Dr. Siva Ram Krishina Vadali, Principal Scientist.</p>
                
-			<p style="margin-bottom: 15px;"><i>+ From August 2011 - May 2015</i>: I was a Lecturer (Department of ECE) at Einstein Academy of Technology and Management, Bhubaneswar.</p>
+			   <p><i>+ From August 2011 - May 2015</i>: I was a Lecturer (Department of ECE) at Einstein Academy of Technology and Management, Bhubaneswar.</p>
              
-            <p style="margin-bottom: 15px;"><i>+ From August 2007 - May 2011</i>: I received a B.Tech degree (Applied Electronics and Instrumentation), from the <a href="https://www.bput.ac.in/">BPUT</a>, Odisha, India.</p>
+               <p><i>+ From August 2007 - May 2011</i>: I received a B.Tech degree (Applied Electronics and Instrumentation), from the <a href="https://www.bput.ac.in/">BPUT</a>, Odisha, India.</p>
+            </div>
             <hr>
             <h3>A bit more information</h3>
             <b>GitHub-ID</b>: <a href="https://github.com/oksamar">oksamar</a>.
@@ -316,15 +332,11 @@ function showHide(shID) {
 	      	<dl class="lining" align="justify">
 				
 			<h3>List of Journals</h3>
-					<ul>  
-            <li> &#8226; S. Das and S. Dandapat, “Heart Murmur Severity Stages Classification Using Multikernel Residual CNN,” IEEE Sensors Journal, 2024. </li>
-				<li> &#8226; S. Das, D. Joytishi, and S. Dandapat, “Automated Detection of Heart Valve Diseases Using Stationary
-                   Wavelet Transform and Attention Based Hierarchical LSTM Network,” IEEE Transactions on
-                     Instrumentation and Measurement, 2023. </li>
-            <li> &#8226; S. Das, D. Joytishi, and S. Dandapat, “Heart Valve Diseases Detection Based on Feature-fusion and
-                        Hierarchical LSTM Network,” IEEE Transactions on Instrumentation and Measurement, 2022. </li>
-				<li>&#8226; S. Das and S. Dandapat, “Multicomponent Oscillatory Model based Heart Sound Classification,”
-                    Journal of acoustic society of India (JASI), 2020.</li>
+					<ul class="pub-list">  
+            <li>S. Das and S. Dandapat, "Heart Murmur Severity Stages Classification Using Multikernel Residual CNN," <i>IEEE Sensors Journal</i>, 2024.</li>
+				<li>S. Das, D. Joytishi, and S. Dandapat, "Automated Detection of Heart Valve Diseases Using Stationary Wavelet Transform and Attention Based Hierarchical LSTM Network," <i>IEEE Transactions on Instrumentation and Measurement</i>, 2023.</li>
+            <li>S. Das, D. Joytishi, and S. Dandapat, "Heart Valve Diseases Detection Based on Feature-fusion and Hierarchical LSTM Network," <i>IEEE Transactions on Instrumentation and Measurement</i>, 2022.</li>
+				<li>S. Das and S. Dandapat, "Multicomponent Oscillatory Model based Heart Sound Classification," <i>Journal of Acoustic Society of India (JASI)</i>, 2020.</li>
 					</ul>
 					
 				<h3>List of Conferences</h3>
@@ -398,10 +410,12 @@ function showHide(shID) {
          <div class="eight columns add-bottom">
 
             <h3 class="add-bottom">Other than Research</h3>
-					<li> Second Prize, National level hindi debate competition, New Delhi, 2002. </li>
-					<li> Participated in district level kho-kho competition in school level, Odisha, Jajpur, 2004. </li>
-					<li> Silver medal, Badminton, EEE Dept., organized by RSF-EEE, IIT Guwahati, 2019. </li>
-					<li> Gold medal, Badminton, EEE Dept., organized by RSF-EEE, IIT Guwahati, 2020. </li>
+					<ul>
+					<li>Second Prize, National level hindi debate competition, New Delhi, 2002.</li>
+					<li>Participated in district level kho-kho competition in school level, Odisha, Jajpur, 2004.</li>
+					<li>Silver medal, Badminton, EEE Dept., organized by RSF-EEE, IIT Guwahati, 2019.</li>
+					<li>Gold medal, Badminton, EEE Dept., organized by RSF-EEE, IIT Guwahati, 2020.</li>
+					</ul>
       	   <h5>&#8226; Photography Gallery </h5>
             <dl><dd>Welcome to my photography gallery, where I showcase some of my favorite moments captured through the lens. 
 			From landscapes to portraits, each photo tells a unique story. 
