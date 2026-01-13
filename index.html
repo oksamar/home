@@ -155,6 +155,29 @@ function showHide(shID) {
 
 <body>
 
+   <!-- Left Stats Panel -->
+   <div class="stats-panel" id="statsPanel">
+      <div class="stat-item">
+         <div class="stat-number" data-target="8">0</div>
+         <div class="stat-label">Publications</div>
+      </div>
+      <div class="stat-item">
+         <div class="stat-number" data-target="7">0</div>
+         <div class="stat-label">Years Experience</div>
+      </div>
+      <div class="stat-divider"></div>
+      <nav class="section-nav">
+         <a href="#styles" class="nav-dot active" title="About Me"><span></span></a>
+         <a href="#portfolio" class="nav-dot" title="Research"><span></span></a>
+         <a href="#extras" class="nav-dot" title="Extras"><span></span></a>
+      </nav>
+   </div>
+
+   <!-- Right Waveforms -->
+   <div class="waveform-container">
+      <canvas id="waveCanvas"></canvas>
+   </div>
+
    <!-- Header
    ================================================== -->
    <header id="home">
@@ -477,6 +500,107 @@ function showHide(shID) {
    <script src="js/spin.js"></script>
 
    <script src="js/init.js"></script>
+
+   <!-- Stats Panel & Waveforms Script -->
+   <script>
+   // Animated Counter
+   function animateCounter(element, target, duration = 2000) {
+      let start = 0;
+      const increment = target / (duration / 16);
+      const timer = setInterval(() => {
+         start += increment;
+         if (start >= target) {
+            element.textContent = target;
+            clearInterval(timer);
+         } else {
+            element.textContent = Math.floor(start);
+         }
+      }, 16);
+   }
+
+   // Initialize counters on page load
+   window.addEventListener('load', () => {
+      document.querySelectorAll('.stat-number').forEach(el => {
+         const target = parseInt(el.getAttribute('data-target'));
+         animateCounter(el, target);
+      });
+   });
+
+   // Section navigation highlighting
+   const sections = document.querySelectorAll('section[id]');
+   const navDots = document.querySelectorAll('.nav-dot');
+
+   window.addEventListener('scroll', () => {
+      let current = '';
+      sections.forEach(section => {
+         const sectionTop = section.offsetTop;
+         const sectionHeight = section.clientHeight;
+         if (pageYOffset >= sectionTop - 200) {
+            current = section.getAttribute('id');
+         }
+      });
+
+      navDots.forEach(dot => {
+         dot.classList.remove('active');
+         if (dot.getAttribute('href') === '#' + current) {
+            dot.classList.add('active');
+         }
+      });
+   });
+
+   // Animated Waveforms
+   const canvas = document.getElementById('waveCanvas');
+   const ctx = canvas.getContext('2d');
+   let animationId;
+
+   function resizeCanvas() {
+      canvas.width = 120;
+      canvas.height = window.innerHeight;
+   }
+   resizeCanvas();
+   window.addEventListener('resize', resizeCanvas);
+
+   let offset = 0;
+   function drawWaveforms() {
+      ctx.clearRect(0, 0, canvas.width, canvas.height);
+      
+      // Draw multiple sine waves
+      for (let i = 0; i < 3; i++) {
+         ctx.beginPath();
+         ctx.strokeStyle = `rgba(20, 184, 166, ${0.15 - i * 0.04})`;
+         ctx.lineWidth = 2;
+         
+         for (let y = 0; y < canvas.height; y++) {
+            const x = Math.sin((y + offset + i * 100) * 0.02) * 30 + 60;
+            if (y === 0) {
+               ctx.moveTo(x, y);
+            } else {
+               ctx.lineTo(x, y);
+            }
+         }
+         ctx.stroke();
+      }
+      
+      offset += 1;
+      animationId = requestAnimationFrame(drawWaveforms);
+   }
+   drawWaveforms();
+
+   // Hide panels on mobile
+   function handleResponsive() {
+      const statsPanel = document.getElementById('statsPanel');
+      const waveformContainer = document.querySelector('.waveform-container');
+      if (window.innerWidth < 1200) {
+         statsPanel.style.display = 'none';
+         waveformContainer.style.display = 'none';
+      } else {
+         statsPanel.style.display = 'flex';
+         waveformContainer.style.display = 'block';
+      }
+   }
+   handleResponsive();
+   window.addEventListener('resize', handleResponsive);
+   </script>
 
 </body>
 
