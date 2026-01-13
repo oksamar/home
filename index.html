@@ -13,7 +13,7 @@
 
    <!-- Mobile Specific Metas
    ================================================== -->
-	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=5, user-scalable=yes">
 
 	<!-- CSS
     ================================================== -->
@@ -77,6 +77,28 @@ function showHide(shID) {
       background: transparent url(up.gif) no-repeat left; }
    a.showLink:hover, a.hideLink:hover {
       border-bottom: 1px dotted #36f; }
+   
+   /* Additional responsive improvements */
+   * {
+      box-sizing: border-box;
+   }
+   
+   img {
+      max-width: 100%;
+      height: auto;
+   }
+   
+   /* Ensure content doesn't overflow on small screens */
+   body {
+      overflow-x: hidden;
+   }
+   
+   /* Better table responsiveness if any */
+   table {
+      width: 100%;
+      overflow-x: auto;
+      display: block;
+   }
 </style>
 
 </head>
@@ -127,7 +149,7 @@ function showHide(shID) {
 
          <div class="twelve columns">
             <h2>About Me</h1>
-            <p align ="left" class="twelve columns"><a href="#"><img width="220" height="120" class="pull-left" alt="sample-image" src="./images/samar.png"></a>            
+            <p align ="left" class="twelve columns"><a href="#"><img style="max-width: 220px; width: 100%; height: auto;" class="pull-left" alt="sample-image" src="./images/samar.png"></a>            
             Hello! 👋 I am <b>Samarjeet Das</b>: a researcher with a PhD in Signal Processing and Machine Learning from IIT Guwahati. I am deeply intrigued by signals and passionate about leveraging machine learning and deep learning models to predict and classify future trends and patterns.
             I am also interested in emerging paradigms like Agentic AI to build autonomous systems that can reason, adapt, and optimize complex processes. 
             <br> <br><br>
@@ -141,7 +163,6 @@ function showHide(shID) {
             <br>
             <i>+ From March 2024 - August 2025</i>: I was an AI/ML Research Engineer (GM R&D) at the <a href="https://www.tcs.com/">Tata Consultancy Services (TCS)</a>, Bengaluru (India)</a>.
 			   <br>
-            <br>
             <i>+ From June 2023 - March 2024</i>: I was a Research Assistant at the <a href="https://iitg.ac.in/tihue/">Technology Innovation Hub</a>, in the <a href="https://www.iitg.ac.in">Indian Institute of Technology, Guwahati (India)</a>.
 			   <br>
             <i>+ From July 2017 - October 2023</i>: I pursued a Ph.D. degree (Signal Processing and Machine Learning), from the <a href="https://www.iitg.ac.in">Indian Institute of Technology, Guwahati (India)</a>.

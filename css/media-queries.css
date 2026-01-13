@@ -6,38 +6,70 @@
 
 /* ================================================================== */
 
+/* Large tablets and iPad Pro landscape 
+--------------------------------------------------------------------- */
+@media only screen and (max-width: 1200px) {
+   header {
+      min-height: 180px;
+      padding: 35px 0 15px;
+   }
+   header .banner-text h1 {
+      font: 42px/1.2em 'opensans-bold', sans-serif;
+   }
+}
 
-/* screenwidth less than 1024px
+/* screenwidth less than 1024px (iPad landscape and smaller laptops)
 --------------------------------------------------------------------- */
 @media only screen and (max-width: 1024px) {
 
     /* header styles
    ------------------------------------------------------------------ */
+   header {
+      min-height: 160px;
+      padding: 30px 0 15px;
+   }
    header .banner-text h1 {
-      font: 80px/1.1em 'opensans-bold', sans-serif;
+      font: 38px/1.2em 'opensans-bold', sans-serif;
       letter-spacing: -1px;
-      margin: 0 auto 12px auto;
+      margin: 0 auto 10px auto;
+   }
+   header .banner-text h3 {
+      font: 16px/1.9em 'librebaskerville-regular', serif;
+      width: 85%;
+   }
+   
+   /* Content sections */
+   #styles, #portfolio, #extras {
+      padding: 20px 15px !important;
+   }
+   
+   .twelve.columns {
+      padding: 0 15px;
    }
 
 }
 
-/* screenwidth less than 900px
+/* screenwidth less than 900px (iPad portrait)
 --------------------------------------------------------------------- */
 @media only screen and (max-width: 900px) {
 
     /* header styles
    ------------------------------------------------------------------ */
-   header .banner { padding-bottom: 12px; }
+   header {
+      min-height: 150px;
+      padding: 25px 0 15px;
+   }
+   header .banner { padding-bottom: 10px; }
    header .banner-text h1 {
-      font: 78px/1.1em 'opensans-bold', sans-serif;
+      font: 60px/1.1em 'opensans-bold', sans-serif;
       letter-spacing: -1px;      
    }
    header .banner-text h3 {
-      font: 17px/1.9em 'librebaskerville-regular', serif;
-      width: 80%;
+      font: 15px/1.9em 'librebaskerville-regular', serif;
+      width: 90%;
    }
    header .banner-text hr {
-      width: 65%;
+      width: 70%;
       margin: 12px auto;
    }
    /* nav-wrap */
@@ -46,6 +78,22 @@
       letter-spacing: 1.5px;
    }
 
+   /* Content sections */
+   #styles, #portfolio, #extras {
+      padding: 15px 10px !important;
+   }
+   
+   /* Images */
+   img {
+      max-width: 100%;
+      height: auto;
+   }
+   
+   .pull-left {
+      float: none !important;
+      display: block;
+      margin: 0 auto 15px auto;
+   }
 
    /* About Section
    ------------------------------------------------------------------- */
@@ -187,18 +235,26 @@
 
    /* Header Styles
    -------------------------------------------------------------------- */
-   header .banner {
-      padding-bottom: 12px;
-      padding-top: 6px;
+   header {
+      min-height: 140px;
+      padding: 20px 0 15px;
    }
-   header .banner-text h1 { font: 68px/1.1em 'opensans-bold', sans-serif; }
+   header .banner {
+      padding-bottom: 10px;
+      padding-top: 5px;
+   }
+   header .banner-text h1 { 
+      font: 32px/1.2em 'opensans-bold', sans-serif;
+      margin: 0 auto 10px auto;
+   }
    header .banner-text h3 {
-      font: 16px/1.9em 'librebaskerville-regular', serif;
-      width: 85%;
+      font: 14px/1.7em 'librebaskerville-regular', serif;
+      width: 90%;
+      margin: 0 auto;
    }
    header .banner-text hr {
       width: 80%;
-      margin: 18px auto;
+      margin: 15px auto;
    }
 
    /* header social links */
@@ -211,6 +267,35 @@
 
     /* scrolldown link */
    header .scrolldown { display: none; }
+
+   /* Content sections - better mobile spacing */
+   #styles, #portfolio, #extras {
+      padding: 15px 5px !important;
+   }
+   
+   .twelve.columns {
+      padding: 0 10px;
+   }
+   
+   /* Typography for mobile */
+   h1, h2, h3, h4, h5, h6 {
+      word-wrap: break-word;
+   }
+   
+   p, li {
+      font-size: 15px;
+      line-height: 1.6;
+   }
+   
+   /* Lists styling */
+   ul {
+      padding-left: 20px;
+   }
+   
+   /* Better link spacing */
+   a {
+      word-wrap: break-word;
+   }
 
 
    /* About Section
@@ -338,7 +423,7 @@
 
 }
 
-/* mobile narrow
+/* mobile narrow (phones)
   -------------------------------------------------------------------------- */
 
 @media only screen and (max-width: 480px) {
@@ -349,19 +434,64 @@
 
    /* header styles
    -------------------------------------------------------------------- */
-   header .banner { padding-top: 24px; }
+   header {
+      min-height: 120px;
+      padding: 15px 0 10px;
+   }
+   header .banner { 
+      padding-top: 10px;
+      padding-bottom: 10px;
+   }
    header .banner-text h1 {
-      font: 40px/1.1em 'opensans-bold', sans-serif;      
-      margin: 0 auto 24px auto;
+      font: 28px/1.2em 'opensans-bold', sans-serif;      
+      margin: 0 auto 10px auto;
    }
    header .banner-text h3 {
-      font: 14px/1.9em 'librebaskerville-regular', sans-serif;
-      width: 90%;
+      font: 13px/1.6em 'librebaskerville-regular', sans-serif;
+      width: 95%;
    }
   
    /* header social links */
-   header .social { font-size: 20px;}
+   header .social { 
+      font-size: 20px;
+      margin: 15px 0 20px 0;
+   }
    header .social li { margin: 0 6px; }
+   
+   /* Content sections - mobile optimization */
+   #styles, #portfolio, #extras {
+      padding: 10px 5px !important;
+   }
+   
+   .twelve.columns {
+      padding: 0 8px;
+   }
+   
+   /* Headings */
+   h1 { font-size: 28px !important; }
+   h2 { font-size: 24px !important; }
+   h3 { font-size: 20px !important; }
+   h4, h5, h6 { font-size: 16px !important; }
+   
+   /* Typography */
+   p, li {
+      font-size: 14px !important;
+      line-height: 1.6 !important;
+      text-align: justify;
+   }
+   
+   /* Images fully responsive */
+   img {
+      max-width: 100% !important;
+      height: auto !important;
+      display: block;
+      margin: 10px auto;
+   }
+   
+   .pull-left {
+      float: none !important;
+      margin: 0 auto 15px auto !important;
+   }
 
    /* footer
    ------------------------------------------------------------------------ */
