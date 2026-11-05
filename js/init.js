@@ -1,188 +1,78 @@
-/*-----------------------------------------------------------------------------------
-/*
-/* Init JS
-/*
------------------------------------------------------------------------------------*/
+const menuToggle = document.querySelector('.menu-toggle');
+const sidebar = document.querySelector('.sidebar');
+const navigationLinks = [...document.querySelectorAll('.nav-link')];
 
- jQuery(document).ready(function($) {
+function closeMenu() {
+   sidebar.classList.remove('open');
+   menuToggle.setAttribute('aria-expanded', 'false');
+   menuToggle.setAttribute('aria-label', 'Open navigation');
+}
 
-/*----------------------------------------------------*/
-/* FitText Settings
------------------------------------------------------- */
-
-    setTimeout(function() {
-	   $('h1.responsive-headline').fitText(1, { minFontSize: '40px', maxFontSize: '90px' });
-	 }, 100);
-
-
-/*----------------------------------------------------*/
-/* Smooth Scrolling
------------------------------------------------------- */
-
-   $('.smoothscroll').on('click',function (e) {
-	    e.preventDefault();
-
-	    var target = this.hash,
-	    $target = $(target);
-
-	    $('html, body').stop().animate({
-	        'scrollTop': $target.offset().top
-	    }, 800, 'swing', function () {
-	        window.location.hash = target;
-	    });
-	});
-
-
-/*----------------------------------------------------*/
-/* Highlight the current section in the navigation bar
-------------------------------------------------------*/
-
-	var sections = $("section");
-	var navigation_links = $("#nav-wrap a");
-
-	sections.waypoint({
-
-      handler: function(event, direction) {
-
-		   var active_section;
-
-			active_section = $(this);
-			if (direction === "up") active_section = active_section.prev();
-
-			var active_link = $('#nav-wrap a[href="#' + active_section.attr("id") + '"]');
-
-         navigation_links.parent().removeClass("current");
-			active_link.parent().addClass("current");
-
-		},
-		offset: '35%'
-
-	});
-
-
-/*----------------------------------------------------*/
-/*	Make sure that #header-background-image height is
-/* equal to the browser height.
------------------------------------------------------- */
-
-   $('header').css({ 'height': $(window).height() });
-   $(window).on('resize', function() {
-
-        $('header').css({ 'height': $(window).height() });
-        $('body').css({ 'width': $(window).width() })
-   });
-
-
-/*----------------------------------------------------*/
-/*	Fade In/Out Primary Navigation
-------------------------------------------------------*/
-
-   $(window).on('scroll', function() {
-
-		var h = $('header').height();
-		var y = $(window).scrollTop();
-      var nav = $('#nav-wrap');
-
-	   if ( (y > h*.20) && (y < h) && ($(window).outerWidth() > 768 ) ) {
-	      nav.fadeOut('fast');
-	   }
-      else {
-         if (y < h*.20) {
-            nav.removeClass('opaque').fadeIn('fast');
-         }
-         else {
-            nav.addClass('opaque').fadeIn('fast');
-         }
-      }
-
-	});
-
-
-/*----------------------------------------------------*/
-/*	Modal Popup
-------------------------------------------------------*/
-
-    $('.item-wrap a').magnificPopup({
-
-       type:'inline',
-       fixedContentPos: false,
-       removalDelay: 200,
-       showCloseBtn: false,
-       mainClass: 'mfp-fade'
-
-    });
-
-    $(document).on('click', '.popup-modal-dismiss', function (e) {
-    		e.preventDefault();
-    		$.magnificPopup.close();
-    });
-
-
-/*----------------------------------------------------*/
-/*	Flexslider
-/*----------------------------------------------------*/
-   $('.flexslider').flexslider({
-      namespace: "flex-",
-      controlsContainer: ".flex-container",
-      animation: 'slide',
-      controlNav: true,
-      directionNav: false,
-      smoothHeight: true,
-      slideshowSpeed: 7000,
-      animationSpeed: 600,
-      randomize: false,
-   });
-
-/*----------------------------------------------------*/
-/*	contact form
-------------------------------------------------------*/
-
-   $('form#contactForm button.submit').click(function() {
-
-      $('#image-loader').fadeIn();
-
-      var contactName = $('#contactForm #contactName').val();
-      var contactEmail = $('#contactForm #contactEmail').val();
-      var contactSubject = $('#contactForm #contactSubject').val();
-      var contactMessage = $('#contactForm #contactMessage').val();
-
-      var data = 'contactName=' + contactName + '&contactEmail=' + contactEmail +
-               '&contactSubject=' + contactSubject + '&contactMessage=' + contactMessage;
-
-      $.ajax({
-
-	      type: "POST",
-	      url: "inc/sendEmail.php",
-	      data: data,
-	      success: function(msg) {
-
-            // Message was sent
-            if (msg == 'OK') {
-               $('#image-loader').fadeOut();
-               $('#message-warning').hide();
-               $('#contactForm').fadeOut();
-               $('#message-success').fadeIn();   
-            }
-            // There was an error
-            else {
-               $('#image-loader').fadeOut();
-               $('#message-warning').html(msg);
-	            $('#message-warning').fadeIn();
-            }
-
-	      }
-
-      });
-      return false;
-   });
-
-
+menuToggle.addEventListener('click', () => {
+   const isOpen = sidebar.classList.toggle('open');
+   menuToggle.setAttribute('aria-expanded', String(isOpen));
+   menuToggle.setAttribute('aria-label', isOpen ? 'Close navigation' : 'Open navigation');
 });
 
+sidebar.querySelectorAll('a').forEach(link => link.addEventListener('click', closeMenu));
+document.addEventListener('click', event => {
+   if (!sidebar.contains(event.target) && !event.target.closest('.menu-toggle')) closeMenu();
+});
+document.addEventListener('keydown', event => {
+   if (event.key === 'Escape' && sidebar.classList.contains('open')) {
+      closeMenu();
+      menuToggle.focus();
+   }
+});
 
+const sections = navigationLinks.map(link => document.querySelector(link.hash));
+function updateNavigation() {
+   const offset = window.innerWidth <= 900 ? 160 : 120;
+   const activeSection = [...sections].reverse().find(section => section.getBoundingClientRect().top <= offset) || sections[0];
+   navigationLinks.forEach(link => {
+      const active = link.hash === `#${activeSection.id}`;
+      link.classList.toggle('active', active);
+      if (active) link.setAttribute('aria-current', 'location');
+      else link.removeAttribute('aria-current');
+   });
+}
+window.addEventListener('scroll', updateNavigation, { passive: true });
+window.addEventListener('resize', () => {
+   if (window.innerWidth > 900) closeMenu();
+   updateNavigation();
+});
+updateNavigation();
 
-
-
-
-
-
+const tabList = document.querySelector('.publication-tabs');
+const tabs = [...tabList.querySelectorAll('[role="tab"]')];
+function selectTab(selectedTab) {
+   tabs.forEach(tab => {
+      const selected = tab === selectedTab;
+      tab.setAttribute('aria-selected', String(selected));
+      tab.tabIndex = selected ? 0 : -1;
+      document.getElementById(tab.getAttribute('aria-controls')).hidden = !selected;
+   });
+}
+tabs.forEach((tab, index) => {
+   const panel = document.getElementById(tab.getAttribute('aria-controls'));
+   panel.setAttribute('role', 'tabpanel');
+   panel.setAttribute('aria-labelledby', tab.id);
+   panel.tabIndex = 0;
+   tab.addEventListener('click', () => selectTab(tab));
+   tab.addEventListener('keydown', event => {
+      let nextIndex;
+      if (event.key === 'ArrowRight') nextIndex = (index + 1) % tabs.length;
+      if (event.key === 'ArrowLeft') nextIndex = (index + tabs.length - 1) % tabs.length;
+      if (event.key === 'Home') nextIndex = 0;
+      if (event.key === 'End') nextIndex = tabs.length - 1;
+      if (nextIndex !== undefined) {
+         event.preventDefault();
+         selectTab(tabs[nextIndex]);
+         tabs[nextIndex].focus();
+      }
+   });
+});
+tabList.hidden = false;
+document.getElementById('publications').classList.add('tabs-ready');
+selectTab(tabs[0]);
+document.getElementById('year').textContent = new Date().getFullYear();

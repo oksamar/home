@@ -1,490 +1,129 @@
 <!DOCTYPE html>
-<!--[if lt IE 8 ]><html class="no-js ie ie7" lang="en"> <![endif]-->
-<!--[if IE 8 ]><html class="no-js ie ie8" lang="en"> <![endif]-->
-<!--[if (gte IE 8)|!(IE)]><!--><html class="no-js" lang="en"> <!--<![endif]-->
+<html lang="en">
 <head>
-
-   <!--- Basic Page Needs
-   ================================================== -->
    <meta charset="utf-8">
-	<title>Samarjeet | IIT G</title>
-	<meta name="description" content="">
-	<meta name="author" content="">
-
-   <!-- Mobile Specific Metas
-   ================================================== -->
-	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=5, user-scalable=yes">
-
-	<!-- CSS
-    ================================================== -->
-   <link rel="stylesheet" href="css/default.css">
-	<link rel="stylesheet" href="css/layout.css">
-   <link rel="stylesheet" href="css/media-queries.css">
-   <link rel="stylesheet" href="css/magnific-popup.css">
+   <meta name="viewport" content="width=device-width, initial-scale=1">
+   <title>Samarjeet Das | AI &amp; Signal Processing Researcher</title>
+   <meta name="description" content="Samarjeet Das, AI/ML Research Scientist at ABB. Research in signal processing, deep learning, biomedical signals, and agentic AI.">
+   <link rel="stylesheet" href="css/fonts.css">
+   <link rel="stylesheet" href="css/font-awesome/css/font-awesome.min.css">
    <link rel="stylesheet" href="css/custom.css">
-
-   <!-- Favicons
-	================================================== -->
-<!--	<link rel="shortcut icon" href="favicon.ico" >-->
-
-<!--google analytics script-->
-<script type="text/javascript">
-
-  var _gaq = _gaq || [];
-  _gaq.push(['_setAccount', 'UA-28027102-1']);
-  _gaq.push(['_setDomainName', 'ece.iisc.ernet.in']);
-  _gaq.push(['_trackPageview']);
-
-  (function() {
-    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
-    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
-    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
-  })();
-
-</script>
-
-<!-- to add click to know more-->
-<script language="javascript" type="text/javascript">
-function showHide(shID) {
-   if (document.getElementById(shID)) {
-      if (document.getElementById(shID+'-show').style.display != 'none') {
-         document.getElementById(shID+'-show').style.display = 'none';
-         document.getElementById(shID).style.display = 'block';
-      }
-      else {
-         document.getElementById(shID+'-show').style.display = 'inline';
-         document.getElementById(shID).style.display = 'none';
-      }
-   }
-}
-</script>
-
-<style type="text/css">
-   /* This CSS is used for the Show/Hide functionality. */
-   .more {
-      display: none;
-      border-top: 1px solid #666;
-      border-bottom: 1px solid #666; }
-   a.showLink, a.hideLink {
-      text-decoration: none;
-      color: #36f;
-      padding-left: 8px;
-      background: transparent url(down.gif) no-repeat left; }
-   a.hideLink {
-      background: transparent url(up.gif) no-repeat left; }
-   a.showLink:hover, a.hideLink:hover {
-      border-bottom: 1px dotted #36f; }
-   
-   /* Additional responsive improvements */
-   * {
-      box-sizing: border-box;
-   }
-   
-   img {
-      max-width: 100%;
-      height: auto;
-   }
-   
-   /* Ensure content doesn't overflow on small screens */
-   body {
-      overflow-x: hidden;
-   }
-   
-   /* Better table responsiveness if any */
-   table {
-      width: 100%;
-      overflow-x: auto;
-      display: block;
-   }
-   
-   /* Tech decoration elements */
-   .tech-decoration {
-      position: absolute;
-      width: 100%;
-      height: 100%;
-      top: 0;
-      left: 0;
-      z-index: 1;
-      pointer-events: none;
-   }
-   
-   .tech-circle {
-      position: absolute;
-      border-radius: 50%;
-      border: 2px solid rgba(255, 255, 255, 0.1);
-      animation: pulse 4s ease-in-out infinite;
-   }
-   
-   .tech-circle-1 {
-      width: 150px;
-      height: 150px;
-      top: 20%;
-      left: 10%;
-      animation-delay: 0s;
-   }
-   
-   .tech-circle-2 {
-      width: 100px;
-      height: 100px;
-      top: 60%;
-      right: 15%;
-      animation-delay: 1.3s;
-   }
-   
-   .tech-circle-3 {
-      width: 80px;
-      height: 80px;
-      bottom: 20%;
-      left: 70%;
-      animation-delay: 2.6s;
-   }
-   
-   @keyframes pulse {
-      0%, 100% {
-         transform: scale(1);
-         opacity: 0.3;
-      }
-      50% {
-         transform: scale(1.1);
-         opacity: 0.6;
-      }
-   }
-</style>
-
+   <script src="js/init.js" defer></script>
 </head>
-
 <body>
-
-   <!-- Header
-   ================================================== -->
-   <header id="home">
-
-      <!-- Decorative elements -->
-      <div class="tech-decoration">
-         <div class="tech-circle tech-circle-1"></div>
-         <div class="tech-circle tech-circle-2"></div>
-         <div class="tech-circle tech-circle-3"></div>
+   <a class="skip-link" href="#main">Skip to content</a>
+   <div class="mobile-bar">
+      <a href="#about" class="mobile-name">Samarjeet Das<span>Research &amp; beyond</span></a>
+      <button class="menu-toggle" type="button" aria-label="Open navigation" aria-controls="sidebar" aria-expanded="false"><i class="fa fa-bars" aria-hidden="true"></i></button>
+   </div>
+   <aside class="sidebar" id="sidebar" aria-label="Profile and navigation">
+      <!-- <a class="monogram" href="#about" aria-label="Samarjeet Das, home">sd<span>.</span></a> -->
+      <div class="sidebar-profile">
+         <img class="portrait" src="images/samar.png" alt="Samarjeet Das" width="168" height="168">
+         <h2>Samarjeet Das<span>Ph.D., IIT Guwahati</span></h2>
+         <p>AI/ML Research Scientist<br>ABB Corporate Research Center</p>
+         <p class="location"><i class="fa fa-map-marker" aria-hidden="true"></i> Bengaluru, India</p>
       </div>
-
-      <nav id="nav-wrap">
-
-         <a class="mobile-btn" href="#nav-wrap" title="Show navigation">Show navigation</a>
-	      <a class="mobile-btn" href="#" title="Hide navigation">Hide navigation</a>
-
-         <ul id="nav" class="nav">
-            <li class="current"><a class="smoothscroll" href="#styles">About Me</a></li>
-            <li><a class="smoothscroll" href="#portfolio">Research</a></li>
-            <li><a class="smoothscroll" href="#extras">Extras</a></li>
-<!--            <li class="current"><a class="smoothscroll" href="#timeline">Timeline</a></li>-->
-<!--            <li class="current"><a class="smoothscroll" href="#moreextras">More-Extras</a></li>-->
-<!--	         <li><a class="smoothscroll" href="#styles">Style Guide</a></li>-->
-         </ul> <!-- end #nav -->
-
-      </nav> <!-- end #nav-wrap -->
-
-  <!--     <div class="row banner">
-         <div class="banner-text">
-<h3 style="color: blue;">"Be the change you wish to see in the world." - Mahatma Gandhi.</h3>
-			<h3 class="responsive-headline"  style="color: green;">"Welcome to my digital space."
-				 To know more <a class="smoothscroll" href="#styles" style="color: red;">scroll</a> the sidebar.</h3>
-            <hr />
+      <nav aria-label="Main navigation">
+         <a class="nav-link active" href="#about" aria-current="location"><i class="fa fa-user" aria-hidden="true"></i> About me <span>01</span></a>
+         <a class="nav-link" href="#research"><i class="fa fa-flask" aria-hidden="true"></i> Research <span>02</span></a>
+         <a class="nav-link" href="#publications"><i class="fa fa-file-text-o" aria-hidden="true"></i> Publications <span>03</span></a>
+         <a class="nav-link" href="#experience"><i class="fa fa-briefcase" aria-hidden="true"></i> Experience <span>04</span></a>
+         <a class="nav-link" href="#beyond"><i class="fa fa-camera" aria-hidden="true"></i> Beyond research <span>05</span></a>
+      </nav>
+      <div class="sidebar-bottom">
+         <p>ELSEWHERE</p>
+         <div class="social-links">
+            <a href="https://scholar.google.com/citations?user=FjUfmoMAAAAJ&amp;hl=en&amp;oi=ao" target="_blank" rel="noopener noreferrer" aria-label="Google Scholar" title="Google Scholar"><i class="fa fa-book" aria-hidden="true"></i></a>
+            <a href="https://github.com/oksamar" target="_blank" rel="noopener noreferrer" aria-label="GitHub" title="GitHub"><i class="fa fa-github" aria-hidden="true"></i></a>
+            <a href="https://in.linkedin.com/in/samarjeet-das-ph-d-82b910137" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn" title="LinkedIn"><i class="fa fa-linkedin" aria-hidden="true"></i></a>
+            <a href="mailto:samarjeet025@gmail.com" aria-label="Email Samarjeet" title="Email Samarjeet"><i class="fa fa-envelope-o" aria-hidden="true"></i></a>
          </div>
-      </div> -->
-
-      <p class="scrolldown">
-         <a class="smoothscroll" href="#styles" style="color: orange;" ><i class="icon-down-circle"></i></a>
-      </p>
-
-   </header> <!-- Header End -->
-
-   <!-- Style Guide Section
-   ================================================== -->
-   <section id="styles" style="padding: 10px 0 12px; background: #fff;">
-
-      <div class="row add-bottom">
-
-         <div class="twelve columns">
-            
-            <!-- New: compact intro that uses the "banner space" but starts at About Me -->
-            <div class="about-hero">
-               <a href="#"><img alt="Samarjeet Das" src="./images/samar.png"></a>
-               <div>
-                  <p class="kicker">
-                     <span style="color: #14b8a6;">AI/ML Research Scientist</span> • 
-                     <span style="color: #3b82f6;">Signal Processing</span> • 
-                     <span style="color: #8b5cf6;">Machine Learning</span> • 
-                     <span style="color: #ec4899;">Deep Learning</span> • 
-                     <span style="color: #f59e0b;">Agentic AI</span>
-                  </p>
-                  <h2 class="name">Samarjeet Das</h2>
-                  <p>
-                     Researcher with a PhD in Signal Processing and Machine Learning from IIT Guwahati. 
-                     Interested in signal processing, deep learning for non-stationary signals, and agentic AI for autonomous systems.
-                  </p>
-                  <div class="cta-row">
-                     <a class="btn" href="https://scholar.google.com/citations?user=FjUfmoMAAAAJ&hl=en&oi=ao" target="_blank" rel="noopener">Google Scholar</a>
-                     <a class="btn" href="https://github.com/oksamar" target="_blank" rel="noopener">GitHub</a>
-                     <a class="btn" href="https://in.linkedin.com/in/samarjeet-das-ph-d-82b910137" target="_blank" rel="noopener">LinkedIn</a>
-                     <a class="btn" href="mailto:samarjeet025@gmail.com">Email</a>
-                  </div>
-               </div>
-            </div>
-
-            <h2>About Me</h2>
-            <p align ="left" class="twelve columns">
-            Hello! 👋 I am <b>Samarjeet Das</b>: a researcher with a PhD in Signal Processing and Machine Learning from IIT Guwahati. I am deeply intrigued by signals and passionate about leveraging machine learning and deep learning models to predict and classify future trends and patterns.
-            I am also interested in emerging paradigms like Agentic AI to build autonomous systems that can reason, adapt, and optimize complex processes. 
-            <br> <br><br>
-            <i>+ From September 2025 - Now</i>: I am an AI/ML Research Scientist at the <a href="https://www.abb.com/global/en/">ABB Corporate Research Center</a>, Bengaluru (India)</a>.
-			<br><br>
-			<b>Research Interests</b>: - Application of Machine Learning and Deep Learning Models,
-         - Time-frequency Analysis of Non-stationary Signals, - Laser Weld Quality Monitoring, - Design and Development of Embedded Systems, - Retrieval Augmented Generation (RAG), - Agentic AI, - Process Control Automation
-            <br>    
-            <hr>
-            <h3>Previous Affiliations</h3>
-            <br>
-            <div class="affiliations">
-               <p><i>+ From March 2024 - August 2025</i>: I was an AI/ML Research Engineer (GM R&D) at the <a href="https://www.tcs.com/">Tata Consultancy Services (TCS)</a>, Bengaluru (India).</p>
-			   
-               <p><i>+ From June 2023 - March 2024</i>: I was a Research Assistant at the <a href="https://iitg.ac.in/tihue/">Technology Innovation Hub</a>, in the <a href="https://www.iitg.ac.in">Indian Institute of Technology, Guwahati (India)</a>.</p>
-			   
-               <p><i>+ From July 2017 - October 2023</i>: I pursued a Ph.D. degree (Signal Processing and Machine Learning), from the <a href="https://www.iitg.ac.in">Indian Institute of Technology, Guwahati (India)</a>.
-               My Ph.D. thesis was titled <b>"Automated Diagnosis of Heart Valve Diseases From Phonocardiogram Signals Using Deep Learning"</b>. 
-			   I had my research denizen at the wonderful <a href="https://www.iitg.ac.in/eee/emstlab/index.php"> Electro Medical Speech Technology (EMST) Lab</a>, with the guidance of <a href="https://www.iitg.ac.in/samaren/">Prof. Samarendra Dandapat</a>.</p>
-            
-               <p><i>+ From July 2015 - May 2017</i>: I received a M.Tech degree (Mechatronics), from the <a href="https://www.iiests.ac.in/">Indian Institute of Engineering Science and Technology, Shibpur (India)</a>. 
-			   My M.Tech thesis was titled <b>"Studies on Development of an Underwater Acoustic Pinger System for Source Localization"</b>. 
-			   I had my research habitat at the robotics and automation group, <a href="https://www.cmeri.res.in/">CSIR-CMERI</a>, Durgapur, with the guidance of Dr. Siva Ram Krishina Vadali, Principal Scientist.</p>
-               
-			   <p><i>+ From August 2011 - May 2015</i>: I was a Lecturer (Department of ECE) at Einstein Academy of Technology and Management, Bhubaneswar.</p>
-             
-               <p><i>+ From August 2007 - May 2011</i>: I received a B.Tech degree (Applied Electronics and Instrumentation), from the <a href="https://www.bput.ac.in/">BPUT</a>, Odisha, India.</p>
-            </div>
-            <hr>
-            <h3>A bit more information</h3>
-            <b>GitHub-ID</b>: <a href="https://github.com/oksamar">oksamar</a>.
-            <br>
-            <b>Google Scholar</b>: <a href="https://scholar.google.com/citations?user=FjUfmoMAAAAJ&hl=en&oi=ao">Click here</a>.
-            <br>
-            <b>Email-id</b>: samarjeet025@gmail.com, samar176102005@iitg.ac.in
-            </p>
-            <hr>
-         </div>
-         
-         <div class="twelve columns">
-            <h3>Courses Taken</h3>
-            <p class="drop-cap"> Linear Algebra, Pattern Recognition and Machine Learning, Biomedical Signal Processing, Digital Signal Processing and Architecture,
-				Probability and Random Process, Mechatronics, Robotics, Embedded system, Micro-electromechanical Systems. 
-				The above courses are the few I took during my M.Tech and Ph.D coursework.
-            </p>
-         </div>
-
-         <div class="twelve columns">
-            <h3>Skills summary</h3>
-            <p class="drop-cap"> Coding: Python, Matlab, SQL, C++; <strong>Documentation:</strong> Latex, Microsoft Word. <strong>Machine Learning:</strong> Theory and implementation of regression and classification models;
-				<strong>Platforms:</strong> Linux, Windows; <strong>Soft-skills:</strong> Critical thinking, Technical writing, Public speaking, Event management.
-            </p>
-         </div>
-
-		<!--
-         <div class="twelve columns">
-            <h3>Internships, Conferences, and Workshops</h3>
-               <dl class="lining" align="justify">
-                  <dt><b>Audition Lab, Ecole Normale Superiere (ENS), Paris, [14 Apr to 08 June, 2014]</b></dt>
-                     <dd>I was a Visiting Student at <a href="http://audition.ens.fr/">Audition Lab</a>.
-                     I worked on an interesting concept of designing auditory skectches.
-                     I worked with mentorship and support from <a href="http://audition.ens.fr/dp/index.html">Daniel Pressnitzer</a>, and
-                     <a href="http://www.institut-langevin.espci.fr/laurent_daudet?lang=fr">Laurent Daudet</a> who had initially proposed the concept.
-                     I carried the concept further, and designed auditory sketches of a sound by jointly using peaks in time-frequency and
-                     rate-scale-time-frequency planes. I also proposed a metric to quantify the notion of auditory sketches suitable to
-                     compare quantify two sketches. The work is in progress and likely we will summarize it someday soon.</dd>
-                  <dt><b>Winter School in Speech and Audio Processing (WiSSAP), 2010-15, India</b></dt>
-                     <dd>I have attended all the WiSSAPs in this time span. It is a yearly workshop, and a very good learning experience to broaden
-                     what I do not know, and should know! In WiSSAP-2015 I gave a talk on Auditory modeling in the workshop.
-                     All the talks are hosted here: <a href="https://sites.google.com/site/wissap2015/program">click</a>.</dd>
-               </dl>
-         </div> 
-      </div> <!-- Row End-->
-   </section> 
-	 <!-- Row End-->
-	
-	<!--
-    <section id="portfolio" style="padding: 10px 0 12px; background: #fff;">
-      <div class="row add-bottom">
-         <div class="twelve columns">
-         <h3>Teaching</h3>
-            <dl class="lining" align="justify">
-               <dt><b>Jan-May 2023</b>:</dt> I am involved in teaching (and learning) the following three courses.
-                  <ul>
-                     <li><a href="https://neerajww.github.io/da221/">DA221: Introduction to Artificial Intelligence</a></li>
-                     <li><a href="https://neerajww.github.io/da623/">DA623: Comuting with Signals</a></li>
-                     <li>DA213: Python Programming Lab</li>
-                  </ul>
-               </dl>
-         </div>
+         <a class="sidebar-email" href="mailto:samarjeet025@gmail.com">samarjeet025@gmail.com <i class="fa fa-long-arrow-right" aria-hidden="true"></i></a>
       </div>
-   </section> -->
-
-   <section id="portfolio" style="padding: 10px 0 12px; background: #fff;">
-      <div class="row add-bottom">
-         <div class="twelve columns">
-            <h3>Research</h3>
-            <dl class="lining" align="justify">
-               <ul>
-                  <li>Biomedical signal processing especially analysis of cardiovascular signals such as heart sound using phonocardiogram (PCG), electrocardiogram (ECG) signal and seismocardiogram (SCG) signal. 
-				  Time-frequency analysis of non-stationary signals, Design and development of electronic circuits, 
-				Machine learning and deep learning applications</li>
-               </ul>
-            </dl>            
-
-            <br><h1>Peer-reviewed Published Findings <br>(for updated list see <a href="https://scholar.google.com/citations?user=FjUfmoMAAAAJ&hl=en&oi=ao">Google Scholar</a>)</h1>
-	      	<dl class="lining" align="justify">
-				
-			<h3>List of Journals</h3>
-					<ul class="pub-list">  
-            <li>S. Das and S. Dandapat, "Heart Murmur Severity Stages Classification Using Multikernel Residual CNN," <i>IEEE Sensors Journal</i>, 2024.</li>
-				<li>S. Das, D. Joytishi, and S. Dandapat, "Automated Detection of Heart Valve Diseases Using Stationary Wavelet Transform and Attention Based Hierarchical LSTM Network," <i>IEEE Transactions on Instrumentation and Measurement</i>, 2023.</li>
-            <li>S. Das, D. Joytishi, and S. Dandapat, "Heart Valve Diseases Detection Based on Feature-fusion and Hierarchical LSTM Network," <i>IEEE Transactions on Instrumentation and Measurement</i>, 2022.</li>
-				<li>S. Das and S. Dandapat, "Multicomponent Oscillatory Model based Heart Sound Classification," <i>Journal of Acoustic Society of India (JASI)</i>, 2020.</li>
-					</ul>
-					
-				<h3>List of Conferences</h3>
-					<ul>  
-            <li> &#8226; MJ Singh, S. Das, LN Sharma, and S. Dandapat, “Stationary Wavelet Transform Based Detection of
-                     Aortic Stenosis Using Seismocardiogram Signal,” 2023 National Conference on Communications
-                    (NCC), Guwahati, India, 2023. </li>
-				<li> &#8226; S. Das and S. Dandapat, “Automated Detection of Heart Murmurs From the PCG Signal Using
-                   Stationary Wavelet Transform,” INDICON, Kerala, India, 2022. </li>
-				<li>&#8226; S. Das and S. Dandapat, “Multiscale Kernel Residual Convolutional Neural Network to Detect Heart
-					Valve Diseases,” INDICON, Kerala, India, 2022.</li>
-				<li> &#8226; S Kumari, D Jyotishi, S. Das, and S. Dandapat, “Analyzing The Effect of Segmentation on PCG
-                Based Biometric System,” INDICON, Kerala, India, 2022. </li>
-            <li> &#8226; S. Das and S. Dandapat, “Synthesis and Classification of Heart Sounds Using Multi-component
-                  Oscillatory Model,” 2020 National Conference on Communications (NCC), Kharagpur, India, 2020. </li>
-				<li> &#8226; S. Das, and SRK. Vadali, “Design Development and Experimental Validation of an Underwater 
-				Acoustic Pinger System,” INDICON, Roorkee, India, 2017. </li>
-					</ul>
-					
-				<h3>Projects and Workshops</h3>
-					<ul>  
-				<li> &#8226; <b>Automated Detection and Classification of Heart Valve Diseases Using Phonocardiogram Signals</b>
-				<br> Mentor: Prof. S. Dandapat, EEE Department, IIT Guwahati.
-				<br> The Project was my PhD Thesis Work. The project aims to develop a robust framework consists of extracting novel
-				features followed by machine learning models to detect different heart valve abnormalities. (2017 - 2023)
- </li>
-				<li> &#8226; <b>Studies on Development of an Underwater Acoustic Pinger System for Source Localization </b>
-				<br>	Mentor: Dr. SRK Vadali, Principal Scientist, CSIR-CMERI, Durgapur.
-					<br> The Project was my MTech Thesis Work. The objective of the project was to design and develop an underwater
-					communication system for source detection and localization. (2015 - 2017)
- </li>
-				<li>&#8226; <b> Development of a GSM Based Home Automation and Security System </b>
-					<br>	Mentor: Dr. Satyasen panda, Krupajal Engineering College, Bhubanseswar.
-					<br>	This was my BTech Project. The objective of the project was to design a cost-effective solution that remotely
-						controls home appliances and enables home security against intruders. (2010 - 2011)
-</li>
-					
-				<li> &#8226; Attended workshop on <b>“Tutorial Series on Deep Learning using Tensorflow (TSDLT),”</b> organized by IEEE Branch, IIT
-					Guwahati, Oct. 2018.
- </li>
-				<li> &#8226; Student Member, Organizing Committee, Workshop on <b>"AI in Healthcare Engineering"</b>, NECBH, IIT Guwahati,
-                    March 28-30, 2019. </li>
-				<li> &#8226; Attended workshop on <b>"Summer School on Automatic Speech Recognition"</b> jointly organized by department of EEE and CLST, 
-						IIT Guwahati, June 2-7, 2019. </li>
-					</ul>
-
-<h3>Academic Achievements </h3>
-					<ul>  
-				<li> &#8226; PhD scholorship holder of MHRD fellowship, Govt. of India, 2017 - 2022.
- </li>
-				<li> &#8226; MTech scholorship holder of MHRD fellowship, Govt. of India, 2015 - 2017. </li>
-				<li>&#8226; Graduate student member of IEEE community, 2022 - Present. </li>
-					<li>&#8226; Member, IEEE Instrumentation and Measurement Society, 2022 - Present. </li>
-					<li>&#8226; Member, IEEE Young Professionals, 2022 - Present.</li>
-					<li>&#8226; Reviewer of Elsevier and Springer Journals, 2020 - Present.</li>
-					<li>&#8226; Event Manager (Organizing technical events, workshops and talks), 
-						RSF-EEE, IIT Guwahati, 2018 - 2019. </li>
-		
-					</ul>
-            
-     	        </dl>
-            <hr>
+   </aside>
+   <main id="main">
+      <section id="about" class="intro section">
+         <!-- <div class="eyebrow"><span class="status-dot"></span> SIGNALS. INTELLIGENCE. IMPACT.</div> -->
+         <h1>Samarjeet Das<span>Researcher. Engineer. Curious by nature.</span></h1>
+         <p class="intro-lead">Making sense of signals.<br>Building intelligence that matters.</p>
+         <p class="intro-copy">I work at the intersection of signal processing and machine learning, turning complex, real-world data into meaningful insights. My interests span biomedical signals, deep learning, and agentic AI for autonomous systems.</p>
+         <div class="intro-actions">
+            <a class="button primary" href="#research">Explore my research <i class="fa fa-arrow-down" aria-hidden="true"></i></a>
+            <a class="text-link" href="mailto:samarjeet025@gmail.com">Get in touch <i class="fa fa-long-arrow-right" aria-hidden="true"></i></a>
          </div>
-      </div>
-    </section>
-   <!-- Row End-->
-   <section id="extras" style="padding: 10px 0 12px; background: #fff;">
-      
-      <div class="row add-bottom">
-
-         <div class="eight columns add-bottom">
-
-            <h3 class="add-bottom">Other than Research</h3>
-					<ul>
-					<li>Second Prize, National level hindi debate competition, New Delhi, 2002.</li>
-					<li>Participated in district level kho-kho competition in school level, Odisha, Jajpur, 2004.</li>
-					<li>Silver medal, Badminton, EEE Dept., organized by RSF-EEE, IIT Guwahati, 2019.</li>
-					<li>Gold medal, Badminton, EEE Dept., organized by RSF-EEE, IIT Guwahati, 2020.</li>
-					</ul>
-      	   <h5>&#8226; Photography Gallery </h5>
-            <dl><dd>Welcome to my photography gallery, where I showcase some of my favorite moments captured through the lens. 
-			From landscapes to portraits, each photo tells a unique story. 
-            <a href="https://photos.app.goo.gl/Rkrx3nM4zuDBipDh9" target="_blank">click to see</a>.</dd>
-            </dl>
-
-         </div>
-
-         <hr />
-
-      </div> <!-- Row End-->
-
-
+         <div class="current-role"><span class="role-label">CURRENTLY</span><p><strong>AI/ML Research Scientist</strong> at <a href="https://www.abb.com/global/en/">ABB Corporate Research Center</a><span>September 2025 &ndash; present &middot; Bengaluru, India</span></p><span class="role-mark" aria-hidden="true">ABB</span></div>
       </section>
 
- <!-- Resume Section End-->
-
-
-   <!-- footer
-   ================================================== -->
-   <footer>
-
-      <div class="row">
-
-         <div class="twelve columns">
-
-         <!--    <ul class="social-links">
-<!--               <li><a href="#"><i class="fa fa-facebook"></i></a></li>-->
-          <!--      <li><a href="https://twitter.com/neeksww"><i class="fa fa-twitter"></i></a></li>
-               <li><a href="https://plus.google.com/communities/106414622057320932578"><i class="fa fa-google-plus"></i></a></li>
-            </ul> -->
-
-            <ul class="copyright">
-               <li>&copy; Copyright 2025 Samar</li>
-               <li>Design by <a title="Styleshout" href="http://www.styleshout.com/">Styleshout</a></li>   
-            </ul>
-
+      <section id="research" class="section">
+         <div class="section-heading"><div><p class="eyebrow">01 / RESEARCH</p><h2>From signals to understanding.</h2></div><i class="fa fa-flask section-icon" aria-hidden="true"></i></div>
+         <p>My Ph.D. at IIT Guwahati explored automated diagnosis of heart valve diseases from phonocardiogram signals using deep learning. Today, I bring that signal-first perspective to industrial intelligence and autonomous systems.</p>
+         <div class="research-topics">
+            <article><span class="topic-number">01</span><h3>Signals &amp; healthcare</h3><p>Time-frequency analysis of non-stationary signals, cardiovascular signal processing, and PCG, ECG, and SCG analysis.</p></article>
+            <article><span class="topic-number">02</span><h3>Applied machine learning</h3><p>Deep learning for detection and classification, laser weld quality monitoring, and process control automation.</p></article>
+            <article><span class="topic-number">03</span><h3>Autonomous systems</h3><p>Agentic AI, retrieval augmented generation, and the design and development of embedded systems.</p></article>
          </div>
+         <figure class="research-figure"><a class="research-image" href="images/Cover_Image_7.png" target="_blank" rel="noopener" title="View full-size research diagram"><img src="images/Cover_Image_7.png" alt="Heart sound acquisition, phonocardiogram preprocessing, and deep learning for automated heart diagnosis" loading="lazy"><span class="image-zoom" aria-hidden="true"><i class="fa fa-search-plus"></i></span></a><figcaption><span>RESEARCH SPOTLIGHT</span> Automated diagnosis of heart valve diseases from heart sounds</figcaption></figure>
+         <details class="detail-block"><summary>Projects &amp; workshops <i class="fa fa-plus" aria-hidden="true"></i></summary>
+            <div class="detail-content">
+               <h3>Automated heart valve disease detection</h3><p>Ph.D. thesis, 2017&ndash;2023. A framework combining novel phonocardiogram features and machine learning to detect heart valve abnormalities. Mentor: Prof. S. Dandapat, IIT Guwahati.</p>
+               <h3>Underwater acoustic pinger system</h3><p>M.Tech thesis, 2015&ndash;2017. Design, development, and experimental validation of an underwater communication system for source detection and localization. Mentor: Dr. SRK Vadali, CSIR-CMERI, Durgapur.</p>
+               <!-- <h3>GSM-based home automation &amp; security</h3><p>B.Tech project, 2010&ndash;2011. A cost-effective system for remote appliance control and home security. Mentor: Dr. Satyasen Panda, Krupajal Engineering College, Bhubaneswar.</p> -->
+               <h3>Workshops</h3><ul><li>Tutorial Series on Deep Learning using TensorFlow, IEEE Branch, IIT Guwahati, October 2018.</li><li>Organizing committee, AI in Healthcare Engineering, NECBH, IIT Guwahati, March 2019.</li><li>Summer School on Automatic Speech Recognition, EEE and CLST, IIT Guwahati, June 2019.</li></ul>
+            </div>
+         </details>
+      </section>
 
-         <div id="go-top" style="display: block;"><a class="smoothscroll" title="Back to Top" href="#styles"><i class="icon-up-open"></i></a></div>
+      <section id="publications" class="section">
+         <div class="section-heading"><div><p class="eyebrow">02 / PUBLICATIONS</p><h2>Ideas, tested and shared.</h2></div><a class="text-link" href="https://scholar.google.com/citations?user=FjUfmoMAAAAJ&amp;hl=en&amp;oi=ao" target="_blank" rel="noopener noreferrer">Google Scholar <i class="fa fa-external-link" aria-hidden="true"></i></a></div>
+         <p>Peer-reviewed work in biomedical signal processing and deep learning. See Google Scholar for the latest list.</p>
+         <div class="publication-tabs" role="tablist" aria-label="Publication type" hidden>
+            <button type="button" role="tab" id="tab-journals" aria-controls="journals" aria-selected="true">Journals <span>4</span></button>
+            <button type="button" role="tab" id="tab-conferences" aria-controls="conferences" aria-selected="false" tabindex="-1">Conferences <span>6</span></button>
+         </div>
+         <div id="journals">
+            <h3 class="publication-label">Journals</h3>
+            <ol class="publication-list">
+               <li><span class="pub-year">2024</span><div><h3>Heart Murmur Severity Stages Classification Using Multikernel Residual CNN</h3><p>S. Das and S. Dandapat</p><span class="venue">IEEE Sensors Journal</span></div></li>
+               <li><span class="pub-year">2023</span><div><h3>Automated Detection of Heart Valve Diseases Using Stationary Wavelet Transform and Attention Based Hierarchical LSTM Network</h3><p>S. Das, D. Joytishi, and S. Dandapat</p><span class="venue">IEEE Transactions on Instrumentation and Measurement</span></div></li>
+               <li><span class="pub-year">2022</span><div><h3>Heart Valve Diseases Detection Based on Feature-fusion and Hierarchical LSTM Network</h3><p>S. Das, D. Joytishi, and S. Dandapat</p><span class="venue">IEEE Transactions on Instrumentation and Measurement</span></div></li>
+               <li><span class="pub-year">2020</span><div><h3>Multicomponent Oscillatory Model based Heart Sound Classification</h3><p>S. Das and S. Dandapat</p><span class="venue">Journal of Acoustic Society of India (JASI)</span></div></li>
+            </ol>
+         </div>
+         <div id="conferences">
+            <h3 class="publication-label">Conferences</h3>
+            <ol class="publication-list">
+               <li><span class="pub-year">2023</span><div><h3>Stationary Wavelet Transform Based Detection of Aortic Stenosis Using Seismocardiogram Signal</h3><p>MJ Singh, S. Das, LN Sharma, and S. Dandapat</p><span class="venue">National Conference on Communications (NCC), Guwahati</span></div></li>
+               <li><span class="pub-year">2022</span><div><h3>Automated Detection of Heart Murmurs From the PCG Signal Using Stationary Wavelet Transform</h3><p>S. Das and S. Dandapat</p><span class="venue">INDICON, Kerala</span></div></li>
+               <li><span class="pub-year">2022</span><div><h3>Multiscale Kernel Residual Convolutional Neural Network to Detect Heart Valve Diseases</h3><p>S. Das and S. Dandapat</p><span class="venue">INDICON, Kerala</span></div></li>
+               <li><span class="pub-year">2022</span><div><h3>Analyzing The Effect of Segmentation on PCG Based Biometric System</h3><p>S. Kumari, D. Jyotishi, S. Das, and S. Dandapat</p><span class="venue">INDICON, Kerala</span></div></li>
+               <li><span class="pub-year">2020</span><div><h3>Synthesis and Classification of Heart Sounds Using Multi-component Oscillatory Model</h3><p>S. Das and S. Dandapat</p><span class="venue">National Conference on Communications (NCC), Kharagpur</span></div></li>
+               <li><span class="pub-year">2017</span><div><h3>Design Development and Experimental Validation of an Underwater Acoustic Pinger System</h3><p>S. Das and SRK. Vadali</p><span class="venue">INDICON, Roorkee</span></div></li>
+            </ol>
+         </div>
+      </section>
 
-      </div>
+      <section id="experience" class="section">
+         <div class="section-heading"><div><p class="eyebrow">03 / THE JOURNEY</p><h2>A foundation in curiosity.</h2></div></div>
+         <div class="timeline">
+            <article><p class="timeline-date">2025 &ndash; PRESENT</p><div><h3>AI/ML Research Scientist</h3><p><a href="https://www.abb.com/global/en/">ABB Corporate Research Center</a> &middot; Bengaluru</p></div></article>
+            <article><p class="timeline-date">2024 &ndash; 2025</p><div><h3>AI/ML Research Engineer</h3><p><a href="https://www.tcs.com/">Tata Consultancy Services</a> &middot; GM R&amp;D, Bengaluru</p><p>March 2024 &ndash; August 2025</p></div></article>
+            <article><p class="timeline-date">2023 &ndash; 2024</p><div><h3>Research Assistant</h3><p><a href="https://iitg.ac.in/tihue/">Technology Innovation Hub, IIT Guwahati</a></p><p>June 2023 &ndash; March 2024</p></div></article>
+            <article><p class="timeline-date">2017 &ndash; 2023</p><div><h3>Ph.D. in Signal Processing &amp; Machine Learning</h3><p><a href="https://www.iitg.ac.in/">IIT Guwahati</a> &middot; July 2017 &ndash; October 2023</p><p>Automated Diagnosis of Heart Valve Diseases From Phonocardiogram Signals Using Deep Learning. <a href="https://www.iitg.ac.in/eee/emstlab/index.php">EMST Lab</a>, advised by <a href="https://www.iitg.ac.in/samaren/">Prof. Samarendra Dandapat</a>.</p></div></article>
+            <article><p class="timeline-date">2015 &ndash; 2017</p><div><h3>M.Tech in Mechatronics</h3><p><a href="https://www.iiests.ac.in/">IIEST Shibpur</a> &middot; July 2015 &ndash; May 2017</p><p>Underwater acoustic pinger system for source localization, with the robotics and automation group at <a href="https://www.cmeri.res.in/">CSIR-CMERI</a>, advised by Dr. Siva Ram Krishina Vadali.</p></div></article>
+            <!-- <article><p class="timeline-date">2011 &ndash; 2015</p><div><h3>Lecturer, Electronics &amp; Communication Engineering</h3><p>Einstein Academy of Technology and Management, Bhubaneswar</p><p>August 2011 &ndash; May 2015</p></div></article> -->
+            <!-- <article><p class="timeline-date">2007 &ndash; 2011</p><div><h3>B.Tech in Applied Electronics &amp; Instrumentation</h3><p><a href="https://www.bput.ac.in/">BPUT</a> &middot; Odisha, August 2007 &ndash; May 2011</p></div></article> -->
+         </div>
+         <details class="detail-block"><summary>Toolkit &amp; coursework <i class="fa fa-plus" aria-hidden="true"></i></summary><div class="detail-content"><h3>Technical toolkit</h3><div class="tags"><span>Python</span><span>MATLAB</span><span>SQL</span><span>C++</span><span>LaTeX</span><span>Linux</span><span>Windows</span></div><p>Regression and classification models, technical writing, Microsoft Word, critical thinking, public speaking, and event management.</p><h3>Selected coursework</h3><p>Linear Algebra, Pattern Recognition and Machine Learning, Biomedical Signal Processing, Digital Signal Processing and Architecture, Probability and Random Process, Mechatronics, Robotics, Embedded Systems, and Micro-electromechanical Systems.</p></div></details>
+         <details class="detail-block"><summary>Academic achievements &amp; service <i class="fa fa-plus" aria-hidden="true"></i></summary><div class="detail-content"><ul><li>MHRD Ph.D. fellowship, Government of India, 2017&ndash;2022.</li><li>MHRD M.Tech fellowship, Government of India, 2015&ndash;2017.</li><li>IEEE graduate student member, Instrumentation and Measurement Society member, and Young Professionals member, since 2022.</li><li>Reviewer for Elsevier and Springer journals, since 2020.</li><li>Event Manager, RSF-EEE, IIT Guwahati, 2018&ndash;2019.</li></ul></div></details>
+      </section>
 
-   </footer> <!-- Footer End-->
-
-   <!-- Java Script
-   ================================================== -->
-   <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
-   <script>window.jQuery || document.write('<script src="js/jquery-1.10.2.min.js"><\/script>')</script>
-   <script type="text/javascript" src="js/jquery-migrate-1.2.1.min.js"></script>
-
-   <script src="js/jquery.flexslider.js"></script>
-   <script src="js/waypoints.js"></script>
-   <script src="js/jquery.fittext.js"></script>
-   <script src="js/magnific-popup.js"></script>
-   <script src="js/doubletaptogo.js"></script>
-   <script src="js/spin.js"></script>
-
-   <script src="js/init.js"></script>
-
+      <section id="beyond" class="section">
+         <div class="section-heading"><div><p class="eyebrow">04 / BEYOND RESEARCH</p><h2>A different kind of focus.</h2></div><i class="fa fa-camera section-icon" aria-hidden="true"></i></div>
+         <div class="beyond-grid"><div><h3>Through the lens</h3><p>Landscapes, portraits, and the moments in between. Photography is another way I explore the world.</p><a class="text-link" href="https://photos.app.goo.gl/Rkrx3nM4zuDBipDh9" target="_blank" rel="noopener noreferrer">Visit my photography gallery <i class="fa fa-external-link" aria-hidden="true"></i></a></div><div><h3>Off the clock</h3><ul class="personal-list"><li><i class="fa fa-trophy" aria-hidden="true"></i><span>Badminton gold (2020) &amp; silver (2019)<small>RSF-EEE, IIT Guwahati</small></span></li><li><i class="fa fa-microphone" aria-hidden="true"></i><span>National Hindi debate &middot; Second prize<small>New Delhi, 2002</small></span></li><li><i class="fa fa-flag-o" aria-hidden="true"></i><span>District-level kho-kho<small>Jajpur, Odisha, 2004</small></span></li></ul></div></div>
+      </section>
+      <section class="contact section" id="contact"><p class="eyebrow">LET'S CONNECT</p><h2>Good research starts<br>with a conversation.</h2><a class="text-link" href="mailto:samarjeet025@gmail.com">samarjeet025@gmail.com <i class="fa fa-long-arrow-right" aria-hidden="true"></i></a><p class="secondary-email">Academic email: <a href="mailto:samar176102005@iitg.ac.in">samar176102005@iitg.ac.in</a></p></section>
+      <footer><span>&copy; <span id="year">2026</span> Samarjeet Das</span><span>Original template by <a href="https://www.styleshout.com/">Styleshout</a></span><a href="#about" title="Back to top">Back to top <i class="fa fa-arrow-up" aria-hidden="true"></i></a></footer>
+   </main>
 </body>
-
 </html>
